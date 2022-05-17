@@ -24,6 +24,11 @@ public class CheckValues {
 	 * @throws InvocationTargetException the invocation target exception
 	 * @throws NoSuchMethodException the no such method exception
 	 * @throws SecurityException the security exception
+	 * 	How to use it:
+	 * 	String packageAndClassName = "org.xxxx.classname";
+	 * 	String methodName = "sayHello"
+	 * 	Object[] params = {property, age};
+		Class[] parameterTypes = {String.class, Integer.class};
 	 */
 	public Object invokeMethodFromObjectInitialized(String packageAndClassName,
 			String methodName, Object[] params, Class<?>... parameterTypes) throws 
@@ -95,6 +100,24 @@ public class CheckValues {
 	public void sayHello()
 	{
 		System.out.println("Hiii");
+	}
+	
+	public boolean isZero(String val)
+	{
+		if("0".equals(val))
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean isNotZero(String val)
+	{
+		if(!"0".equals(val))
+		{
+			return true;
+		}
+		return false;
 	}
 
 }
