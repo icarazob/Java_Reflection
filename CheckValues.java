@@ -13,7 +13,7 @@ public class CheckValues {
 	
 	/**
 	 * Invoke method from object initialized.
-	 *
+	 * 	Method must be public
 	 * @param packageAndClassName the package and class name
 	 * @param methodName the method name
 	 * @return the object
@@ -45,7 +45,7 @@ public class CheckValues {
 	
 	/**
 	 * Creates the new object and invoke method with params.
-	 *
+	 * Method must be public
 	 * @param packageAndClassName the package and class name
 	 * @param methodName the method name
 	 * @param params the params
@@ -78,7 +78,7 @@ public class CheckValues {
         //String methodName = "";
         Method setNameMethod = null;
         // with single parameter, return void
-        setNameMethod = objectClass.getMethod(methodName, parameterTypes); //With parameters        	
+        setNameMethod = objectClass.getMethod(methodName, parameterTypes); //With parameters   
         result = setNameMethod.invoke(objectMapped, params); // pass args
         return result;
 	}
